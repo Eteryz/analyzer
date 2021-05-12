@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="705.0" prefHeight="400.0" prefWidth="705.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <children>
+      <Button fx:id="analyzeButton" alignment="CENTER" focusTraversable="false" layoutX="300.0" layoutY="352.0" mnemonicParsing="false" onMouseClicked="#OnClickMethod" prefHeight="34.0" prefWidth="105.0" style="-fx-background-color: #fafafa;" text="Analyze" textAlignment="CENTER" AnchorPane.bottomAnchor="14.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="textBox" focusTraversable="false" layoutX="45.0" layoutY="53.0" prefHeight="43.0" prefWidth="615.0" promptText="Введите строку, которую нужно проанализировать">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="labl" layoutX="68.0" layoutY="20.0" text="Синтаксический анализ оператора описания переменных языка Turbo Pascal" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="45.0" layoutY="139.0" prefHeight="206.0" prefWidth="615.0">
+         <children>
+            <ListView fx:id="idListView" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="typeListView" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="weightListView" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <Label layoutX="101.0" layoutY="109.0" text="Идентификатор" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="342.0" layoutY="109.0" text="Тип" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="458.0" layoutY="109.0" text="Занимаемый объем памяти" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
