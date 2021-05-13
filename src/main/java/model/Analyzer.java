@@ -108,7 +108,7 @@ public class Analyzer {
                             id += ch;
                             state = States.E;
                         } else if (ch == ' ') {
-                            if (id.length() < 8 && checkReservedWords(id)) {
+                            if (id.length() <= 8 && checkReservedWords(id)) {
                                 count++;
                                 idList.addLast(id);
                             }else if (!checkReservedWords(id))
@@ -118,7 +118,7 @@ public class Analyzer {
                             state = States.E1;
                             id = "";
                         } else if (ch == ',') {
-                            if (id.length() < 8 && checkReservedWords(id)) {
+                            if (id.length() <= 8 && checkReservedWords(id)) {
                                 idList.addLast(id);
                                 count++;
                             }else if (!checkReservedWords(id))
@@ -128,7 +128,7 @@ public class Analyzer {
                             state = States.D;
                             id = "";
                         } else if (ch == ':') {
-                            if (id.length() < 8 && checkReservedWords(id)) {
+                            if (id.length() <= 8 && checkReservedWords(id)) {
                                 count++;
                                 idList.addLast(id);
                             } else if (!checkReservedWords(id))
